@@ -246,11 +246,7 @@ public class PullToRefreshLayout extends FrameLayout {
         }
     }
     
-    public void onDestroyView() {
-		try {
-			mPullToRefreshLayout.manuallyDetachFromWindow();
-		} catch (Exception e) {
-		}
-		super.onDestroyView();
-	}
+    public void manuallyDetachFromWindow(){
+        onDetachedFromWindow();
+    }
 }
